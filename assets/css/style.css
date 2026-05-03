@@ -93,7 +93,7 @@ body {
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #00C6FF;
+    background: rgb(134, 28, 255);
     left: 0;
     bottom: -4px;
     transition: width 0.3s ease;
