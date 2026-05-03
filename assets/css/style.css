@@ -219,7 +219,7 @@ body {
 /* Section titles */
 .contact-box h2 {
     margin-bottom: 10px;
-    color: #00C6FF;
+    color: #861cff;
 }
 
 /* Text spacing */
@@ -245,5 +245,5 @@ body {
 }
 
 .social-links a:hover {
-    background: #0072FF;
+    background: #7AAFFB;
 }
