@@ -84,7 +84,7 @@ body {
 
 /* Hover effect */
 .nav-links li a:hover {
-    color: #fff;
+    color: white;
 }
 
 /* Underline animation */
@@ -219,7 +219,7 @@ body {
 /* Section titles */
 .contact-box h2 {
     margin-bottom: 10px;
-    color: #861cff;
+    color: rgb(134, 28, 255);
 }
 
 /* Text spacing */
@@ -245,5 +245,5 @@ body {
 }
 
 .social-links a:hover {
-    background: #7AAFFB;
+    background: rgb(122, 175, 251);
 }
