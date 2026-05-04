@@ -5,6 +5,10 @@
     font-family: Figtree;
     src: url("../fonts/figtree-font.ttf");
 }
+@font-face {
+    font-family:FingerPaint;
+    src:url("../fonts/fingerpaint-font.ttf")
+}
 
 /* =========================
    🔹 2. RESET
@@ -220,6 +224,7 @@ body {
 .contact-box h2 {
     margin-bottom: 10px;
     color: rgb(134, 28, 255);
+    font-family:FingerPaint;
 }
 
 /* Text spacing */
@@ -246,4 +251,119 @@ body {
 
 .social-links a:hover {
     background: rgb(122, 175, 251);
+}
+
+/* 🔹 HERO SECTION */
+.hero {
+    margin-top: 80px;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ccc;
+    font-family:FingerPaint;
+}
+
+/* 🔹 PROFILE IMAGE */
+.profile-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: scale(0.6);
+
+    /* 👇 IMPORTANT: two animations */
+    animation: popIn 0.6s ease-out forwards,
+               glowPulse 2.5s ease-in-out infinite;
+    
+    animation-delay: 0s, 0.6s; /* glow starts AFTER pop */
+}
+
+
+/* 🔹 ABOUT SECTION */
+.about-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 🔹 CARD */
+.about-card {
+    max-width: 800px;
+    padding: 25px;
+
+    border-radius: 20px;
+    border: 1px solid #9333ea;
+
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+
+    color: white;
+}
+
+/* Title */
+.about-card h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+/* Paragraph */
+.about-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;   /* 🔥 FIX: keep visible */
+        transform: scale(1);
+    }
+}
+
+/* 💜 CONTINUOUS NEON GLOW */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 15px #a855f7,
+                    0 0 30px #9333ea,
+                    0 0 45px #7e22ce;
+    }
+
+    50% {
+        box-shadow: 0 0 35px #c084fc,
+                    0 0 70px #a855f7,
+                    0 0 100px #9333ea;
+    }
+
+    100% {
+        box-shadow: 0 0 15px #a855f7,
+                    0 0 30px #9333ea,
+                    0 0 45px #7e22ce;
+    }
 }
