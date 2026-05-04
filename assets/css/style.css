@@ -200,57 +200,149 @@ body {
     }
 }
 
-/* 🔹 CONTACT PAGE */
+/* 🔹 CONTACT SECTION */
 .contact-section {
     margin-top: 80px;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     color: white;
 }
 
-/* Section box */
-.contact-box {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 400px;
-
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-
-    text-align: left;
+/* 🔥 LAYOUT (SIDE BY SIDE) */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-/* Section titles */
+/* 🔹 BOX */
+.contact-box {
+    flex: 1 1 300px;
+    max-width: 350px;
+
+    padding: 20px;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+
+    text-align: left;
+
+    /* animation base */
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition: all 0.4s ease;
+}
+
+/* 🔥 SHOW ANIMATION */
+.contact-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* STAGGER EFFECT */
+.contact-box:nth-child(1) { transition-delay: 0.1s; }
+.contact-box:nth-child(2) { transition-delay: 0.2s; }
+.contact-box:nth-child(3) { transition-delay: 0.3s; }
+
+/* HOVER */
+.contact-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(134, 28, 255, 0.3);
+}
+
+/* 🔹 TITLES */
 .contact-box h2 {
     margin-bottom: 10px;
     color: rgb(134, 28, 255);
-    font-family:FingerPaint;
+    font-family: FingerPaint, sans-serif;
 }
 
-/* Text spacing */
+/* 🔹 TEXT */
 .contact-box p {
     margin: 8px 0;
 }
 
-/* Social links */
+/* 🔹 SOCIAL */
 .social-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Social buttons */
 .social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     text-decoration: none;
     color: white;
+
     padding: 10px;
     border-radius: 8px;
-    background: rgba(255,255,255,0.1);
+
+    background: rgba(255,255,255,0.08);
+
     transition: 0.3s;
 }
 
 .social-links a:hover {
-    background: rgb(122, 175, 251);
+    transform: translateX(6px);
+    background: linear-gradient(45deg, #7aaffb, #861cff);
+}
+
+.social-links img {
+    width: 18px;
+}
+
+/* 🔹 FAQ */
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background: rgba(255,255,255,0.08);
+    padding: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 10px;
+    transition: max-height 0.3s ease;
+}
+
+/* ACTIVE FAQ */
+.faq-item.active .faq-answer {
+    max-height: 120px;
+    padding: 10px;
+}
+
+/* ICON ROTATION */
+.faq-question span {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* 🔹 HERO SECTION */
