@@ -459,3 +459,164 @@ body {
                     0 0 45px #7e22ce;
     }
 }
+
+
+
+/*---------------------*/
+/* 🔹 PROJECT SECTION */
+.projects-section {
+    margin-top: 100px;
+    padding: 40px 20px;
+
+    color: white;
+    text-align: center;
+}
+
+/* 🔹 TITLE */
+.projects-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* 🔥 SIDE BY SIDE LAYOUT */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* 🔹 PROJECT CARD */
+.project-card {
+    width: 400px;
+    padding: 25px;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+
+    text-align: left;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition: all 0.4s ease;
+}
+
+/* 🔥 SCROLL ANIMATION */
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🔥 HOVER EFFECT */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow: 0 10px 25px rgba(134, 28, 255, 0.3);
+}
+
+/* 🔹 HEADER */
+.project-header {
+    margin-bottom: 15px;
+}
+
+.project-header h2 {
+    margin: 0;
+    color: rgb(134, 28, 255);
+}
+
+.project-header span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* 🔹 TAGS */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    padding: 6px 12px;
+
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+/* TAG HOVER */
+.project-tags span:hover {
+    background: linear-gradient(45deg, #7aaffb, #861cff);
+    transform: translateY(-2px);
+}
+
+/* 🔹 PROJECT POINTS */
+.project-points {
+    padding-left: 18px;
+}
+
+.project-points li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* 📱 MOBILE */
+@media(max-width: 768px) {
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* 🔹 PROJECT BUTTONS */
+.project-buttons {
+    margin-top: 20px;
+}
+
+/* BUTTON */
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 10px 18px;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    transition: all 0.3s ease;
+}
+
+/* ICON */
+.project-btn img {
+    width: 18px;
+}
+
+/* HOVER */
+.project-btn:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(45deg, #7aaffb, #861cff);
+
+    box-shadow: 0 5px 15px rgba(134, 28, 255, 0.3);
+}

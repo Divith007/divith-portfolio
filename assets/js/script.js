@@ -31,3 +31,22 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 boxes.forEach(box => observer.observe(box));
+
+// 🔹 PROJECT CARD SCROLL ANIMATION
+const projectCards = document.querySelectorAll('.project-card');
+
+const projectObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+
+    });
+
+}, { threshold: 0.2 });
+
+projectCards.forEach(card => {
+    projectObserver.observe(card);
+});
