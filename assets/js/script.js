@@ -50,3 +50,22 @@ const projectObserver = new IntersectionObserver(entries => {
 projectCards.forEach(card => {
     projectObserver.observe(card);
 });
+
+// 🔹 SKILL CARD ANIMATION
+const skillCards = document.querySelectorAll('.skill-card');
+
+const skillObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+
+    });
+
+}, { threshold: 0.2 });
+
+skillCards.forEach(card => {
+    skillObserver.observe(card);
+});

@@ -620,3 +620,111 @@ body {
 
     box-shadow: 0 5px 15px rgba(134, 28, 255, 0.3);
 }
+
+/* 🔹 SKILLS SECTION */
+.skills-section {
+    margin-top: 100px;
+    padding: 40px 20px;
+
+    color: white;
+    text-align: center;
+}
+
+/* 🔹 TITLE */
+.skills-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* 🔥 GRID LAYOUT */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* 🔹 CARD */
+.skill-card {
+    width: 350px;
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    text-align: left;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition: all 0.4s ease;
+}
+
+/* 🔥 ANIMATION ACTIVE */
+.skill-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🔥 HOVER */
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow: 0 10px 25px rgba(134, 28, 255, 0.3);
+}
+
+/* 🔹 CARD TITLE */
+.skill-card h2 {
+    margin-bottom: 20px;
+    color: rgb(134, 28, 255);
+}
+
+/* 🔹 TAG CONTAINER */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* 🔹 TAG */
+.skill-tags span {
+    padding: 10px 16px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.08);
+
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+}
+
+/* 🔥 TAG HOVER */
+.skill-tags span:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(45deg, #7aaffb, #861cff);
+
+    box-shadow: 0 5px 15px rgba(134, 28, 255, 0.3);
+}
+
+/* 📱 MOBILE */
+@media(max-width: 768px) {
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
